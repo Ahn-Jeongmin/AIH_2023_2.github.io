@@ -20,7 +20,7 @@ def find_most_similar_characters(data, user_mbti):
 
 
 def GPT_ans(nn, cn, line, mbti):
-    openai.api_key="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"
+    openai.api_key= #masked *******
     messages=[]
 
 
