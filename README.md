@@ -26,7 +26,9 @@ The project uses a dataset collected from the Personality Cafe forum, consisting
    - Conversion to lowercase.
    - Alignment of dialogue length to match novel excerpts.
    - Use of `RandomOverSampler` to address data imbalance.
-  
+
+
+![image](https://github.com/user-attachments/assets/3af4c407-f87c-4bf5-b6f5-4bf115512a06)  
 2. **Classification Models**
    - **Introverted / Extroverted (I/E)**
    - **Intuitive / Observant (N/S)**
@@ -41,9 +43,15 @@ The project uses a dataset collected from the Personality Cafe forum, consisting
    - **Epochs**: 10
 
 3. **Label Mapping**
+
+![image](https://github.com/user-attachments/assets/81f601d2-241f-482e-ae58-db5146ad859b)
+![image](https://github.com/user-attachments/assets/997ad47e-07a0-45fb-9105-dc8ef5716a73)
+
    - The project uses label mappings for various personality types to categorize characters based on the MBTI framework.
 
-4. **Output and Recommendations**
+5. **Output and Recommendations**
+
+
    - Upon inputting a user’s MBTI, the system provides:
      - **Character Information**: Data is retrieved from a pre-saved database based on similarity checks.
      - **Personalized Passages**: Recommendations for the most relatable novel passages, including explanations of the scenes and their connection to the user's personality.
@@ -54,8 +62,14 @@ The project uses a dataset collected from the Personality Cafe forum, consisting
 
 1. **Input Your MBTI**: Start by entering your MBTI personality type.
 2. **Receive Character Information**: Get detailed information about characters that match your personality.
-3. **Explore Novel Passages**: Read and connect with passages from classic literature that resonate with your personality.
-4. **Discover More**: Receive suggestions for other characters and novels that might interest you based on your MBTI.
+![image](https://github.com/user-attachments/assets/cfe8d27b-fc59-4dd1-950b-2947c7149fa4)
+
+4. **Explore Novel Passages**: Read and connect with passages from classic literature that resonate with your personality.
+![image](https://github.com/user-attachments/assets/37503dee-2628-4666-8c04-d4f9a46001bd)
+
+6. **Discover More**: Receive suggestions for other characters and novels that might interest you based on your MBTI.
+![image](https://github.com/user-attachments/assets/cd0ed20c-75b3-4046-8db3-e7b516e43e1c)
+
 
 ## Dataset
 
@@ -66,6 +80,7 @@ The project uses a dataset collected from the Personality Cafe forum, consisting
   - **Judging/Prospecting**: 8385 training, 2097 validation samples.
 
 ## Challenges
+![image](https://github.com/user-attachments/assets/d80ba6cb-0b53-4a04-afa9-f6296f1c7c17)
 
 - **Data Imbalance**: Significant imbalance observed in E/I and N/S indicators.
 - **Complexity in Program Implementation**: Balancing accuracy and model complexity.
