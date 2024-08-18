@@ -1,4 +1,4 @@
-# Personality-Based Literature Analysis
+# Personality-Based Literature Analysis & Recommendation
 
 This project focuses on analyzing and classifying literary characters based on the Myers-Briggs Personality Types (MBTI). The goal is to create a unique experience where users can interact with text, relate to characters based on their own personality type, and receive personalized recommendations for passages from classic English literature.
 
