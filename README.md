@@ -18,6 +18,8 @@ The project uses a dataset collected from the Personality Cafe forum, consisting
 
 ### Key Features
 
+![image](https://github.com/user-attachments/assets/fe743474-e2a9-4ffd-a79f-0f949b1e5f3b)
+
 
 1. **Data Preprocessing**
    - Removal of URLs, special characters, and delimiters.
