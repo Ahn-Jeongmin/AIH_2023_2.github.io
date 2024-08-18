@@ -1,15 +1,82 @@
-# Project Title
+# Personality-Based Literature Analysis
 
-"문학 수용 능력 향상을 위한 BERT 파인튜닝 성격 유형 분류기 모델의 활용"
+This project focuses on analyzing and classifying literary characters based on the Myers-Briggs Personality Types (MBTI). The goal is to create a unique experience where users can interact with text, relate to characters based on their own personality type, and receive personalized recommendations for passages from classic English literature.
+
+## Overview
+
+The project uses a dataset collected from the Personality Cafe forum, consisting of approximately 8000 data rows categorized by MBTI personality types. Additionally, it includes dialogues extracted from nine classic English novels:
+
+- 1984
+- Animal Farm
+- Chicago
+- Death of a Salesman
+- Frankenstein
+- Old Man and the Sea
+- Pride and Prejudice
+- The Great Gatsby
+- The Picture of Dorian Gray
+
+### Key Features
 
 
-## Getting Started
+1. **Data Preprocessing**
+   - Removal of URLs, special characters, and delimiters.
+   - Conversion to lowercase.
+   - Alignment of dialogue length to match novel excerpts.
+   - Use of `RandomOverSampler` to address data imbalance.
+  
+2. **Classification Models**
+   - **Introverted / Extroverted (I/E)**
+   - **Intuitive / Observant (N/S)**
+   - **Thinking / Feeling (T/F)**
+   - **Judging / Prospecting (J/P)**
 
-* 텍스트 자체와 교감하고 자기자신과의 접점을 찾는 과정을 통해, 문학적인 텍스트를 내면화하고 소통할 수 있는 경험이 현재 문학 교육에는 부재한다. 
-따라서 이 연구를 통해, 문학 독서에 있어 독자가 텍스트에 조금 더 공감하고 자기자신을 투영할 수 있는 기회를 제공하는 것을 목적으로 삼고 있다. 
-이를 위해, 소설 속 주인공들의 성격 유형을 파악한 뒤, 이용자의 성격유형과 유사한 소설 캐릭터를 추천하고, 이들의 대사와 소설 대목을 인식하도록 도움을 주는 과정을 거쳐 이용자의 독서를 조금 더 “공감” 중심의 독서의 방향으로 나아가도록 돕고자 한다.
 
-* 인공지능 인문학 학부연구생 3기 2월 심포지엄 발표회 백업
+   Each model uses the following configuration:
+   - **Loss Function**: CrossEntropy
+   - **Optimizer**: AdamW
+   - **Batch Size**: 16
+   - **Epochs**: 10
+
+3. **Label Mapping**
+   - The project uses label mappings for various personality types to categorize characters based on the MBTI framework.
+
+4. **Output and Recommendations**
+   - Upon inputting a user’s MBTI, the system provides:
+     - **Character Information**: Data is retrieved from a pre-saved database based on similarity checks.
+     - **Personalized Passages**: Recommendations for the most relatable novel passages, including explanations of the scenes and their connection to the user's personality.
+     - **Additional Character Suggestions**: Recommendations for other literary characters with similar traits.
+
+## How to Use
+
+
+1. **Input Your MBTI**: Start by entering your MBTI personality type.
+2. **Receive Character Information**: Get detailed information about characters that match your personality.
+3. **Explore Novel Passages**: Read and connect with passages from classic literature that resonate with your personality.
+4. **Discover More**: Receive suggestions for other characters and novels that might interest you based on your MBTI.
+
+## Dataset
+
+- **Original Data**: 6940 training and 1735 validation samples (split 80:20).
+- **Post-Oversampling**:
+  - **Introverted/Extroverted**: 10681 training, 2671 validation samples.
+  - **Intuitive/Observant**: 11964 training, 2992 validation samples.
+  - **Judging/Prospecting**: 8385 training, 2097 validation samples.
+
+## Challenges
+
+- **Data Imbalance**: Significant imbalance observed in E/I and N/S indicators.
+- **Complexity in Program Implementation**: Balancing accuracy and model complexity.
+
+## Future Work
+
+- **Incorporate Descriptive Text**: Extend analysis beyond dialogue to include narrative descriptions.
+- **Improve J/P Reliability**: Address issues related to the J/P indicator in literary contexts.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ### Prerequisites
 
