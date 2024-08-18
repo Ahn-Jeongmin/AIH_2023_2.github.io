@@ -92,7 +92,8 @@ The project uses a dataset collected from the Personality Cafe forum, consisting
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- As an undergraduate research assistant at AIH LAB, I am contributing to the project titled "Establishing AI Humanities to Enhance the Value of Humanities in the Posthuman Era." 
+- All research conducted is attributed to [AIH LAB](https://aihumanities.org/ko/).
 
 
 ### Prerequisites
